@@ -28,6 +28,6 @@ workflows:
   print-say-hello:
     jobs:
       - print-hello
-      - say-hello
+      - say-hello:
           requires:
             - print-hello

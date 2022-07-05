@@ -26,9 +26,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
     
-      - run: echo "Hello Dear" >output.txt
+      - run: echo "Hello Dear" > ~/output.txt
       - persist_to_workspace:
-          root: workspace
+          root: ~/
             # Must be relative path from root
           paths:
               - output.txt
@@ -40,9 +40,9 @@ jobs:
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /workspace
+          at: ~/
       
-      - run: cat output.txt
+      - run: cat ~/output.txt
 
 
 # Invoke jobs via workflows

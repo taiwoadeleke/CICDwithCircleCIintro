@@ -30,7 +30,7 @@ jobs:
       - persist_to_workspace:
           root: workspace
             # Must be relative path from root
-            paths:
+          paths:
               - output.txt
   print_output_file:
     docker:

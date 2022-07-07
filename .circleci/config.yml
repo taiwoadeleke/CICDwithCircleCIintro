@@ -9,11 +9,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: return 0
-      - run:
-          name: on error
-          command: echo "this is error"
-          when: on_fail 
+      
     
       - run: echo Hello
   say-hello:
